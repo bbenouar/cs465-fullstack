@@ -11,6 +11,8 @@
     "express": "^4.19.2",
     "hbs": "^4.2.0",
     "http-errors": "~1.6.3",
+    "mongoose": "^8.4.0",
+    "mongose": "^0.0.2-security",
     "morgan": "~1.9.1"
   }
 }
