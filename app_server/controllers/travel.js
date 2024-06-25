@@ -1,3 +1,6 @@
+
+const Trip = require('../../app_api/models/travlr'); // Ensure correct path to your model
+
 const tripsEndpoint = 'http://localhost:3000/api/trips';
 const options = {
 method: 'GET',

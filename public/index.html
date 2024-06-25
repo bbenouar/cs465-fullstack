@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<!-- Website template by freewebsitetemplates.com -->
 <html>
 <head>
 	<meta charset="UTF-8">
 	<title>Travlr Getaways Website Template</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<style>
+		.trip-image {
+			width: 200px;
+			cursor: pointer;
+		}
+		#trip-data {
+			margin-top: 20px;
+			padding: 10px;
+			border: 1px solid #ccc;
+		}
+	</style>
 </head>
 <body>
 	<div id="background">
@@ -129,5 +140,31 @@
 			</p>
 		</div>
 	</div>
+	<!-- Add the following section for trip images and JSON display -->
+	<div id="trip-section">
+		<h2>Travel Locations</h2>
+		<div>
+			<img src="images/reef1.jpg" class="trip-image" data-code="GALR210214" alt="Gale Reef">
+			<img src="images/reef2.jpg" class="trip-image" data-code="DAWR210315" alt="Dawson's Reef">
+			<img src="images/reef3.jpg" class="trip-image" data-code="CLAR210621" alt="Clair's Reef">
+		</div>
+		<div id="trip-data">
+			<h2>Trip Data</h2>
+			<pre id="trip-json"></pre>
+		</div>
+	</div>
+
+	<script>
+		$(document).ready(function() {
+			$('.trip-image').on('click', function() {
+				const tripCode = $(this).data('code');
+				$.getJSON(`/api/trips/${tripCode}`, function(data) {
+					$('#trip-json').text(JSON.stringify(data, null, 2));
+				}).fail(function() {
+					$('#trip-json').text('Error fetching trip data.');
+				});
+			});
+		});
+	</script>
 </body>
 </html>
