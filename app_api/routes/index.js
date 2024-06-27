@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require('express'); // Express App
 const router = express.Router(); // Create a new router object to handle routes
 
 // Import the controller that will handle requests to the trips endpoint
@@ -8,12 +8,15 @@ const tripsController = require('../controllers/trips');
 // This route will fetch a list of trips using the tripsList function from the trips controller
 router
     .route('/trips')
-    .get(tripsController.tripsList);
+    .get(tripsController.tripsList)
+    .post(tripsController.tripsAddTrip); // Post Method Adds a Trip
+
 
 // GET Method routes tripsFindByCode - requires parameter
 router
     .route('/trips/:tripCode')
-    .get(tripsController.tripsFindByCode);    
+    .get(tripsController.tripsFindByCode)
+    .put(tripsController.tripsUpdateTrip);    
 
 // Optional: Add a middleware to handle errors specifically for API routes
 router.use((err, req, res, next) => {

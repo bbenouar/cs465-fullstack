@@ -1,3 +1,5 @@
+
+
 const tripsEndpoint = 'http://localhost:3000/api/trips';
 const options = {
 method: 'GET',

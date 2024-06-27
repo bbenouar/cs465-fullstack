@@ -6,12 +6,8 @@ const dbURI = `mongodb://${host}/travlr`;
 
 // Build the connection string and set the connection timeout.
 // timeout is in milliseconds.
-const connect = () => {
-    setTimeout(() => mongoose.connect(dbURI, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-    }), 1000);
-};
+mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true });
+
 
 
 // Monitor connection events
@@ -65,8 +61,6 @@ process.on('SIGTERM', () => {
     process.exit(0);
     });
 
-// Make initial connection to DB
-connect();
 
 // Import Mongoose schema
 require('./travlr');
