@@ -16,7 +16,6 @@ API testing is crucial in ensuring that the various endpoints work correctly and
 Testing endpoints in a full-stack application involves methods for sending requests (GET, POST, PUT, DELETE) and validating the responses. Security adds complexity to testing because it requires ensuring that endpoints are protected and that only authorized users can access certain functionalities. This was handled by integrating JWT-based authentication and verifying token validity during testing.
 Conclusion
 Completing the Travlr project involved integrating various technologies and methodologies to build a robust and user-friendly travel management application. The transition from traditional server-rendered pages to a modern SPA architecture significantly enhanced the user experience. Using a NoSQL database like MongoDB provided the flexibility needed for handling dynamic travel data. Thorough testing ensured the reliability and security of the application, making Travlr a well-rounded solution for both customers and administrators.
-
 Reflection
 This course has significantly advanced my professional goals by providing me with essential full-stack web development skills. Here’s how it has helped:
 Key Skills Acquired:
