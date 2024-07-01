@@ -3,8 +3,8 @@ The Travlr project is a comprehensive full-stack web application designed to ser
 
 #Architecture#
 In developing the Travlr project, we employed different types of frontend development:
-	Express HTML and JavaScript: Used for server-side rendering and delivering static files, providing a simple, straightforward way to render HTML views.
-	Single-Page Application (SPA) with Angular: Offers a more dynamic, responsive user experience by loading a single HTML page and updating the content dynamically without refreshing the page.
+Express HTML and JavaScript: Used for server-side rendering and delivering static files, providing a simple, straightforward way to render HTML views.
+Single-Page Application (SPA) with Angular: Offers a more dynamic, responsive user experience by loading a single HTML page and updating the content dynamically without refreshing the page.
 The choice of a NoSQL MongoDB database for the backend was driven by its flexibility in handling unstructured data and its scalability. MongoDB's document-oriented storage allows for easy storage and retrieval of JSON-like data, making it a perfect fit for the dynamic data requirements of a travel application.
 
 #Functionality#
