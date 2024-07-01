@@ -1,7 +1,6 @@
 #Travlr Project Overview.
 
 The Travlr project is a comprehensive full-stack web application designed to serve both customer and administrative needs. This project integrates robust backend functionalities using Express and MongoDB with a dynamic frontend built using Angular. Below is a reflection on the development process, highlighting key architectural decisions, functionality, and testing methodologies.
-
 #Architecture.
 In developing the Travlr project, we employed different types of frontend development:
 	Express HTML and JavaScript: Used for server-side rendering and delivering static files, providing a simple, straightforward way to render HTML views.
